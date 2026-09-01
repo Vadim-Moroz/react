@@ -1,6 +1,7 @@
 
 import './App.css'
-import {coursesTitleArray} from "./Courses/MyCourses.ts";
+import {CoursesComponent} from "./components/courses-component/CoursesComponent.tsx";
+
 
 const App=()=> {
 
@@ -8,7 +9,7 @@ const App=()=> {
     <>
       <div>
         <ul>
-          {coursesTitleArray.map((value,index)=><ul>{index},{value}</ul>)}
+            {<CoursesComponent/>}
         </ul>
       </div>
     </>
