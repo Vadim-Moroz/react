@@ -1,4 +1,12 @@
+.head{
+    text-align: center;
+    background-color: #daab38;
+    margin: 10px;
+    border: 5px #0b292c solid;
+    border-radius: 10px;
+}
 li{
-    color: red;
+    color: #3b1d97;
     font-weight: bold;
+    gap: 1rem;
 }

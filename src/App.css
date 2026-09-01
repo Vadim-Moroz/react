@@ -1,4 +1,7 @@
-li{
+ul{
     background-color: #71c12f;
     margin: 10px;
+    border-radius: 10px;
+    border: 5px solid #2e88df;
+    width: 20%;
 }

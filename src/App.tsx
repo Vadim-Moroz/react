@@ -7,11 +7,7 @@ const App=()=> {
 
   return (
     <>
-      <div>
-        <ul>
             {<CoursesComponent/>}
-        </ul>
-      </div>
     </>
   )
 }
