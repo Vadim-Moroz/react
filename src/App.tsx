@@ -1,6 +1,6 @@
 
 import './App.css'
-import {PostComponents} from "./components/posts-component/PostComponents.tsx";
+import {CommentComponents} from "./components/comments-component/CommentComponents.tsx";
 
 
 const App=()=> {
@@ -9,7 +9,7 @@ const App=()=> {
     <>
       <div>
         <ul>
-            {<PostComponents/>}
+            {<CommentComponents/>}
         </ul>
       </div>
     </>
