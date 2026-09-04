@@ -1,8 +1,8 @@
-import {ITodo} from "../model/TodoModel.ts";
+import {IPost} from "../model/PostModel.ts";
 
-const baseUrlTodo = import.meta.env.VITE_API_URLTTODO + "/todos";
+const baseUrlTodo = import.meta.env.VITE_API_URLTTODO + "/posts";
 export const loadtodos = async ()=>{
-    const response:ITodo[] = await fetch(baseUrlTodo)
+    const response:IPost[] = await fetch(baseUrlTodo)
         .then(value => value.json())
     return response;
 }

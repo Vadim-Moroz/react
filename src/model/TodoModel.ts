@@ -1,6 +1,0 @@
-export interface ITodo {
-    userId: 1,
-    id: 1,
-    title: "delectus aut autem",
-    completed: false
-}
