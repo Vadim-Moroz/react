@@ -1,6 +1,6 @@
 
 import './App.css'
-import {FamilyComponent} from "./components/family-component/FamilyComponent.tsx";
+import {TodoComponents} from "./components/family-component/TodoComponents.tsx";
 
 
 const App=()=> {
@@ -9,7 +9,7 @@ const App=()=> {
     <>
       <div>
         <ul>
-            {<FamilyComponent/>}
+            {<TodoComponents/>}
         </ul>
       </div>
     </>
