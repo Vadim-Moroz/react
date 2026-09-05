@@ -1,17 +1,13 @@
 
 import './App.css'
-import {CommentComponents} from "./components/comments-component/CommentComponents.tsx";
+import {ProductComponents} from "./components/products-component/ProductComponents.tsx";
 
 
 const App=()=> {
 
   return (
     <>
-      <div>
-        <ul>
-            {<CommentComponents/>}
-        </ul>
-      </div>
+            {<ProductComponents/>}
     </>
   )
 }

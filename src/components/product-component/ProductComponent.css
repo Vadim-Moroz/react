@@ -1,0 +1,49 @@
+.head{
+    background-color: #66b9ea;
+    border: solid 1px #3d6dc8;
+    border-radius: 10px;
+}
+.main{
+    background-color: #21407a;
+}
+.main div{
+    min-width: 200px;
+}
+.general{
+    background-color: #3d6dc8;
+}
+.tags{
+    background-color: #3d6dc8;
+}
+.tags p{
+    margin-left: 10px;
+    font-size: 20px;
+}
+.details{
+    background-color: #3d6dc8;
+}
+.dimensions p{
+    margin-left: 10px;
+    font-size: 20px;
+}
+.delivery{
+    background-color: #3d6dc8;
+}
+.delivery p{
+    margin-left: 10px;
+    font-size: 20px;
+}
+.reviews{
+    background-color: #3d6dc8;
+}
+.reviews .review{
+    background-color: #28cc2b;
+    border-radius: 10px;
+    border: solid 1px #298332;
+}
+.additional-info{
+    background-color: #3d6dc8;
+}
+img{
+    max-width: 200px;
+}
