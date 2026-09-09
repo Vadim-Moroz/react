@@ -2,7 +2,7 @@
 const ProductsComponent = () => {
     return (
         <div>
-            Product
+            Just Products
         </div>
     );
 };
