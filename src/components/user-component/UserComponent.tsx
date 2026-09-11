@@ -1,28 +1,27 @@
 import {FC} from 'react';
-import type {IUsers} from "../../models/user-models/IUsers.tsx";
+import {IUsersDummy} from "../../models/user-models/IUsersDummy.tsx";
+import { useNavigate} from "react-router-dom";
+
 
 type UserTypeProp = {
-    item:IUsers;
+    item:IUsersDummy;
 };
 const UserComponent:FC<UserTypeProp> = ({item}) => {
-    return (
-        <div>
-            <h1>{item.id}</h1>
-            <p>{item.name}</p>
-            <p>{item.username}</p>
-            <p>{item.email}</p>
-            <p>{item.address.street}</p>
-            <p>{item.address.suite}</p>
-            <p>{item.address.city}</p>
-            <p>{item.address.zipcode}</p>
-            <p>{item.address.geo.lng}</p>
-            <p>{item.address.geo.lat}</p>
-            <p>{item.phone}</p>
-            <p>{item.website}</p>
-            <p>{item.company.name}</p>
-            <p>{item.company.catchPhrase}</p>
-            <p>{item.company.bs}</p>
+        const navigation = useNavigate();
+        const onButtonClick = () => {
+                navigation( item.id+'/carts')
+        }
 
+        return (
+        <div>
+                <div><h1>{item.id}</h1>
+                        <p>{item.firstName}</p>
+                        <p>{item.lastName}</p>
+                        <p>{item.email}</p>
+                        <p>{item.phone}</p>
+                        <p>{item.username}</p>
+                        <button onClick={onButtonClick}>Open cart</button>
+                </div>
         </div>
     );
 };

@@ -1,12 +1,19 @@
-import {Link, Outlet} from "react-router-dom";
+import {useEffect, useState} from "react";
+import {IUsersDummy} from "../../models/user-models/IUsersDummy.tsx";
+import {generalService} from "../../service/api.service.tsx";
+import {UsersDummyModel} from "../../models/user-models/UsersDummy.ts";
+import {urls} from "../../constants/urls.ts";
+import UserComponent from "./UserComponent.tsx";
+import {Outlet} from "react-router-dom";
 
 const PostsComponent = () => {
+    const [users, setUsers] = useState<IUsersDummy[]>([])
+    useEffect( ()=>{
+        generalService.getDataDummy <UsersDummyModel & { users: IUsersDummy[]}>(urls.users.AllUsersDummy).then((AllUsers)=>setUsers(AllUsers.users))
+    },[]);
     return (
         <div>
-            <ul>
-                <li><Link to={'jsonplaceholder'}>Info jsonplaceholder</Link></li>
-                <li><Link to={'dummyjson'}>Info dummyjson</Link></li>
-            </ul>
+            <div>{users.map(user => <UserComponent key={user.id} item={user}/>)}</div>
             <Outlet/>
         </div>
     );
