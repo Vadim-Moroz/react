@@ -6,13 +6,11 @@ import UserComponent from "./UserComponent.tsx";
 import type {IUsers} from "../model/IUsers.ts";
 
 const UsersComponent = () => {
-    const [query,setQuery]=useSearchParams()
+    const [query]=useSearchParams()
     const [datas, setUsers] = useState<IUsers[]>([])
     useEffect(() => {
         const pg=query.get('pg')
-        if(pg){
-            getUsers(pg).then((AllData) => setUsers(AllData.data))
-        }
+            getUsers(pg||'1').then((AllData) => setUsers(AllData.data))
     }, [query]);
     return (
         <>
