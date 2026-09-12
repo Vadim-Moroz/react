@@ -1,9 +1,13 @@
 import './App.css'
+import PaginationComponent from "./component/pagination/PaginationComponent.tsx";
+import UsersComponent from "./component/UsersComponent.tsx";
 
-function App() {
-
+const App=()=> {
   return (
     <>
+      <PaginationComponent/>
+      <UsersComponent/>
+      <PaginationComponent/>
     </>
   )
 }
