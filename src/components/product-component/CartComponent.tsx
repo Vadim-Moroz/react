@@ -12,15 +12,15 @@ const CartComponent:FC<CartTypeProp> = ({cart}) => {
     return (
         <div>
             <div>
-                <h1>{cart.id}</h1>
+                <h1>Cart of user: {cart.id}</h1>
                 <div>{cart.products.map((products:IProducts) => <div>
-                    <p>{products.id}</p>
                     <p>{products.title}</p>
                     <p>{products.price}</p>
                     <p>{products.quantity}</p>
                     <p>{products.total}</p>
                     <p>{products.discountPercentage}</p>
                     <p>{products.discountedTotal}</p>
+                    <p>{products.id}</p>
                     <img src={products.thumbnail} alt={products.title}/>
                 </div>)}</div>
             </div>

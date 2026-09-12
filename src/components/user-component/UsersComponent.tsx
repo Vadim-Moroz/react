@@ -4,7 +4,6 @@ import {generalService} from "../../service/api.service.tsx";
 import {UsersDummyModel} from "../../models/user-models/UsersDummy.ts";
 import {urls} from "../../constants/urls.ts";
 import UserComponent from "./UserComponent.tsx";
-import {Outlet} from "react-router-dom";
 
 const PostsComponent = () => {
     const [users, setUsers] = useState<IUsersDummy[]>([])
@@ -14,7 +13,6 @@ const PostsComponent = () => {
     return (
         <div>
             <div>{users.map(user => <UserComponent key={user.id} item={user}/>)}</div>
-            <Outlet/>
         </div>
     );
 };
