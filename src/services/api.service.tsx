@@ -1,6 +1,7 @@
-// import type {IUsers} from "../model/IUsers.ts";
-import type {ResponseIUsers} from "../model/ResponseIUsers.ts";
+import type {ResponseIProducts} from "../model/ResponseIProducts.ts";
 
-export const getUsers = async (query:string):Promise<ResponseIUsers> => {
-    return await fetch(`https://reqres.in/api/users?page=`+query).then(res => res.json())
+export const getProducts = async (page:string):Promise<ResponseIProducts> => {
+    const limit=10
+    const skip=limit * (+page)-limit
+    return await fetch('https://dummyjson.com/products' + '?skip=' + skip).then(res => res.json())
 }
