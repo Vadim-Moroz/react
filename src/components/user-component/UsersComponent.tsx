@@ -5,7 +5,7 @@ import {UsersDummyModel} from "../../models/user-models/UsersDummy.ts";
 import {urls} from "../../constants/urls.ts";
 import UserComponent from "./UserComponent.tsx";
 
-const PostsComponent = () => {
+const UsersComponent = () => {
     const [users, setUsers] = useState<IUsersDummy[]>([])
     useEffect( ()=>{
         generalService.getDataDummy <UsersDummyModel & { users: IUsersDummy[]}>(urls.users.AllUsersDummy).then((AllUsers)=>setUsers(AllUsers.users))
@@ -17,4 +17,4 @@ const PostsComponent = () => {
     );
 };
 
-export default PostsComponent;
+export default UsersComponent;
