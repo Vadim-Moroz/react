@@ -3,6 +3,7 @@ import {login} from "../services/api.service.tsx";
 
 const LoginComponent = () => {
     useEffect(()=>{
+        // Викликає метод login та передає відповідні дані
         login({
             username: 'emilys',
             password: 'emilyspass',

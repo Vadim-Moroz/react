@@ -1,3 +1,4 @@
+// отримує дані з певної комірки в LocalStorage
 export const retriveLocalStorage = <T,>(key: string) => {
     const object= localStorage.getItem(key)||'';
     if(!object){
