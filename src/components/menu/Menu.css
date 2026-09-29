@@ -3,5 +3,8 @@ li{
 }
 a{
     text-decoration: none;
-
+}
+.menu{
+    display: flex;
+    justify-content: start;
 }

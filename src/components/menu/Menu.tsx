@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 import './Menu.css'
 const Menu = () => {
     return (
-        <div>
+        <div className="menu">
             <ul>
                 <li >
                     <Link to='/cars'>cars</Link>
