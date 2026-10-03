@@ -5,9 +5,12 @@ import PostsPage from "../pages/PostsPage.tsx";
 import CommentsPage from "../pages/CommentsPage.tsx";
 import GeneralPage from "../pages/GeneralPage.tsx";
 
+// Структура маршрутів сайту
 export const router = createBrowserRouter([
     {
-        path: "/",element:<MainLayout/>,children:[
+        path: "/",element:<MainLayout/>,
+        // Дочірні маршрути MainLayout
+        children:[
             {path:"users",element:<UsersPage/>},
             {path:"posts",element:<PostsPage/>},
             {path:"comments",element:<CommentsPage/>},

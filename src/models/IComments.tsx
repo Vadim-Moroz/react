@@ -1,3 +1,4 @@
+// Описує структуру одного коментаря
 export interface IComment {
   postId: number;
   id: number;

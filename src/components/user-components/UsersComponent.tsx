@@ -5,10 +5,13 @@ import {useAppDispatch} from "../../redux/hooks/useAppDispatch.tsx";
 import {userSliceActions} from "../../slices/usersSlice/UserSlice.tsx";
 
 const UsersComponent = () => {
-    const {users} = useAppSelector(({userSlice}) => userSlice) // Достає потрібні дані в потрібний атрибут
-    const dispatch = useAppDispatch(); // Типізує dispatch
+    // Отримує стан userSlice з Redux та деструктуризує його на масив користувачів і стан їх завантаження
+    const {users} = useAppSelector(({userSlice}) => userSlice)
+    // Отримує функцію dispatch для відправлення actions
+    const dispatch = useAppDispatch();
     useEffect(() => {
-        dispatch(userSliceActions.loadUsers()); // Отримує користувачів
+        // Відправляє асинхронний action для отримання користувачів з API та збереження отриманих даних у store
+        dispatch(userSliceActions.loadUsers());
     },[])
     return (
         <div>

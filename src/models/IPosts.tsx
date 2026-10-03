@@ -1,3 +1,4 @@
+// Описує структуру одного поста
 export interface IPost {
   userId: number;
   id: number;

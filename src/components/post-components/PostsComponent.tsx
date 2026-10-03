@@ -6,10 +6,13 @@ import {useAppDispatch} from "../../redux/hooks/useAppDispatch.tsx";
 import {useEffect} from "react";
 
 const PostsComponent = () => {
-    const {posts,loadState} = useAppSelector(({postSlice}) => postSlice) // Достає потрібні дані в потрібний атрибут
-    const dispatch = useAppDispatch(); // Типізує dispatch
+    // Отримує стан postSlice з Redux та деструктуризує його на масив постів і стан їх завантаження
+    const {posts,loadState} = useAppSelector(({postSlice}) => postSlice)
+    // Отримує функцію dispatch для відправлення actions
+    const dispatch = useAppDispatch();
     useEffect(() => {
-        dispatch(postSliceActions.loadPosts());// Отримує пости
+        // Відправляє асинхронний action для отримання постів з API та збереження отриманих даних у store
+        dispatch(postSliceActions.loadPosts());
     },[])
     return (
         <div>

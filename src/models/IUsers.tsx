@@ -1,3 +1,5 @@
+// Описує структуру одного користувача
+
 interface Geo {
   lat: string;
   lng: string;

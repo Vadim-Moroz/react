@@ -12,14 +12,14 @@ type commentSliceType = {
 
 const initisialState:commentSliceType={comments:[],loadState:false} // Створює початковий стан commentSlice
 export const commentSlice = createSlice({
-    name:"commentSlice",// Встановлює назву commentSlice commentSlice
+    name:"commentSlice",// Встановлює назву commentSlice для commentSlice
     initialState:initisialState, // Встановлює початковий стан slice
     // Місце для синхронних reducer-функцій
     reducers:{
         // Синхрона функція зміни стану
         changeLoadState:(state,action)=>{
             // state поточний стан commentSlice
-            // action містить нове значення для loadState.
+            // action містить нове значення для loadState
             state.loadState=action.payload // Змінює значення loadState на значення передане в payload action
         }
     },
@@ -41,19 +41,19 @@ export const commentSlice = createSlice({
             console.log(action)
         })
         //  Перевіряє чи результат loadComments є успішним
-        // Якщо loadComments має статус fulfilled, виконується ця функція.
+        // Якщо loadComments має статус fulfilled, виконується ця функція
         .addMatcher(isFulfilled(loadComments),(state)=>{
             state.loadState=true;
         })
         // Перевіряє чи результат loadComments є не успішним
-        // Якщо loadComments має статус rejected, виконується ця функція.
+        // Якщо loadComments має статус rejected, виконується ця функція
         .addMatcher(isRejected(loadComments),(state)=>{
             console.log(state);
         })
 });
-// Створює об'єкт з actions для роботи з commentSlice.
+// Створює об'єкт з actions для роботи з commentSlice
 export const commentSliceActions = {
     // Додає до об'єкта всі синхронні actions, створені через reducers
+    // Додає асинхронний thunk loadComments щоб його можна було викликати через commentSliceActions
     ...commentSlice.actions,loadComments
-    // Додає асинхронний thunk loadComments щоб його можна було викликати через commentSliceActions.
 }

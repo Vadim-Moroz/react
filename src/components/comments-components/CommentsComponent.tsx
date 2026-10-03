@@ -5,10 +5,13 @@ import CommentComponent from "./CommentComponent.tsx";
 import {commentSliceActions} from "../../slices/commentSlice/CommentSlice.tsx";
 
 const CommentsComponent = () => {
-    const {comments,loadState} = useAppSelector(({commentSlice}) => commentSlice) // Достає потрібні дані в потрібний атрибут
-    const dispatch = useAppDispatch(); // Типізує dispatch
+    // Отримує стан commentSlice з Redux та деструктуризує його на масив коментарів і стан їх завантаження
+    const {comments,loadState} = useAppSelector(({commentSlice}) => commentSlice)
+    // Отримує функцію dispatch для відправлення actions
+    const dispatch = useAppDispatch();
     useEffect(() => {
-        dispatch(commentSliceActions.loadComments());// Отримує коментарів
+        // Відправляє асинхронний action для отримання коментарів з API та збереження отриманих даних у store
+        dispatch(commentSliceActions.loadComments());
     },[])
     return (
         <div>
