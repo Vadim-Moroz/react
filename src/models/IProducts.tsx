@@ -42,4 +42,4 @@ export interface IProduct {
   meta: MetaItem;
   images: string[];
   thumbnail: string;
-}
+} // Типізація списку продуктів

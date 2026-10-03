@@ -8,4 +8,4 @@ export interface IUsersWithTokens {
   image: string;
   accessToken: string;
   refreshToken: string;
-}
+} // Описує структуру об'єкта користувача, який містить дані користувача та токени авторизації користувачів

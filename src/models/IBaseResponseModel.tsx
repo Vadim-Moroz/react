@@ -5,4 +5,4 @@ export interface IProductResponseModel {
     total: number;
     skip: number;
     limit: number;
-}
+} // Описує структуру відповіді API при отриманні списку продуктів
