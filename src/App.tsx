@@ -14,7 +14,7 @@ function App() {
             setTheme({bgcolor, color})
       }
         }}>
-        <LeftBranch />
+        <LeftBranch/>
         <RightBranch/>
     </MyContext.Provider>
     </body>

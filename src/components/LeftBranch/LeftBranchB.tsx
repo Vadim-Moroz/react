@@ -8,7 +8,7 @@ const LeftBranchB = () => {
             <p>LeftBranchB</p>
                 <button onClick={()=>{
                     change('white','black')
-                }}>change theme</button>
+                }}>change theme on light</button>
             </div>
     );
 };
