@@ -2,14 +2,14 @@ import {useContext} from "react";
 import {MyContext} from "../../MyContext/MyContext.tsx";
 
 const LeftBranchB = () => {
-    const {change} = useContext(MyContext)
+    const {theme} = useContext(MyContext)
     return (
-        <div>
-            <p>LeftBranchB</p>
-                <button onClick={()=>{
-                    change('white','black')
-                }}>change theme on light</button>
-            </div>
+        <div style={{
+            backgroundColor: theme.bgcolor,
+            color: theme.color
+        }}>
+            <h1>LeftBranchB</h1>
+        </div>
     );
 };
 
