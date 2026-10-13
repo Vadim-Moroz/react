@@ -1,8 +1,8 @@
 // Описує структуру одного коментаря
 export interface IComment {
-  postId: number;
-  id: number;
-  name: string;
-  email: string;
-  body: string;
+  postId: number; // Ідентифікатор поста, до якого належить коментар
+  id: number; // Ідентифікатор коментаря
+  name: string; // Заголовок коментаря
+  email: string; // Електронна пошта автора коментаря
+  body: string; // Вміст коментаря
 }

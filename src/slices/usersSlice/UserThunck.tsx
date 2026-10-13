@@ -13,7 +13,7 @@ export const loadUsers = createAsyncThunk(
         try{
             // Викликає getAll передаючи ній тип даних IUser[] вказуючи що результат має бути масивом користувачів
             const users = await getAll<IUser[]>('/users')
-            // Якщо результат успішний повертає користувачів
+            // Якщо результат успішний повертає отриманий масив користувачів
             return thunkAPI.fulfillWithValue(users)
         }catch(e){// Якщо виникає помилка catch її перехоплює
             // та повертає інформацію про неї

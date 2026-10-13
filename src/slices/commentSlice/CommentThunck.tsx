@@ -13,7 +13,7 @@ export const loadComments = createAsyncThunk(
         try{
             // Викликає getAll передаючи ній тип даних IComment[] вказуючи що результат має бути масивом коментарів
             const comments = await getAll<IComment[]>('/comments')
-            // Якщо результат успішний повертає коментарі
+            // Якщо результат успішний повертає отриманий масив коментарів
             return thunkAPI.fulfillWithValue(comments)
         } catch(e){ // Якщо виникає помилка catch її перехоплює
             // та повертає інформацію про неї

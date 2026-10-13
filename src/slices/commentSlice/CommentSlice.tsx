@@ -12,20 +12,13 @@ type commentSliceType = {
 
 const initisialState:commentSliceType={comments:[],loadState:false} // Створює початковий стан commentSlice
 export const commentSlice = createSlice({
-    name:"commentSlice",// Встановлює назву commentSlice для commentSlice
+    name:"commentSlice",// Встановлює назву слайсу для ідентифікації
     initialState:initisialState, // Встановлює початковий стан slice
     // Місце для синхронних reducer-функцій
-    reducers:{
-        // Синхрона функція зміни стану
-        changeLoadState:(state,action)=>{
-            // state поточний стан commentSlice
-            // action містить нове значення для loadState
-            state.loadState=action.payload // Змінює значення loadState на значення передане в payload action
-        }
-    },
+    reducers:{},
     // Місце для асихроних функцій
     extraReducers:builder => builder
-        // Метод виконується якщо результат loadComments є успішним і оновлю відповідні дані
+        // Метод виконується якщо результат loadComments є успішним і оновлює відповідні дані
         .addCase(loadComments.fulfilled, (state, action:PayloadAction<IComment[]>)=>{
             // state поточний стан commentSlice
             // action action з результатом виконання loadComments

@@ -11,26 +11,19 @@ type userSliceType = {
 
 const initisialState:userSliceType={users:[],loadState:false}// Створює початковий стан userSlice
 export const userSlice = createSlice({
-    name:"userSlice",// Встановлює назву userSlice для userSlice
+    name:"userSlice",// Встановлює назву слайсу для ідентифікації
     initialState:initisialState,// Встановлює початковий стан slice
     // Місце для синхронних reducer-функцій
-    reducers:{
-        // Синхрона функція зміни стану
-        changeLoadState:(state,action)=>{
-            // state поточний стан userSlice
-            // action містить нове значення для loadState
-            state.loadState=action.payload // Змінює значення loadState на значення передане в payload action
-        }
-    },
-    // Місце для асихроних функцій
+    reducers:{},
+    // Місце для асинхроних функцій
     extraReducers:builder => builder
-        // Метод виконується якщо результат loadUsers є успішним і оновлю відповідні дані
+        // Метод виконується якщо результат loadUsers є успішним і оновлює відповідні дані
         .addCase(loadUsers.fulfilled, (state, action:PayloadAction<IUser[]>)=>{
             // state поточний стан userSlice
             // action action з результатом виконання loadUsers
             // PayloadAction<IUser[]> означає, що payload містить масив об'єктів IUser
             state.users = action.payload
-            // Записує отриманий з API масив постів у state.users
+            // Записує отриманий з API масив користувачів у state.users
         })
         // Метод виконується якщо результат loadUsers є не успішним
         .addCase(loadUsers.rejected, (state, action)=>{

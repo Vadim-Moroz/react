@@ -11,20 +11,13 @@ type postSliceType = {
 
 const initisialState:postSliceType={posts:[],loadState:false}// Створює початковий стан postSlice
 export const postSlice = createSlice({
-    name:"postSlice",// Встановлює назву postSlice для postSlice
+    name:"postSlice",// Встановлює назву слайсу для ідентифікації
     initialState:initisialState,// Встановлює початковий стан slice
     // Місце для синхронних reducer-функцій
-    reducers:{
-        // Синхрона функція зміни стану
-        changeLoadState:(state,action)=>{
-            // state поточний стан postSlice
-            // action містить нове значення для loadState
-            state.loadState=action.payload // Змінює значення loadState на значення передане в payload action
-        }
-    },
+    reducers:{},
     // Місце для асихроних функцій
     extraReducers:builder => builder
-        // Метод виконується якщо результат loadPosts є успішним і оновлю відповідні дані
+        // Метод виконується якщо результат loadPosts є успішним і оновлює відповідні дані
         .addCase(loadPosts.fulfilled, (state, action:PayloadAction<IPost[]>)=>{
             // state поточний стан postSlice
             // action action з результатом виконання loadPosts
