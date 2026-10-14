@@ -1,3 +1,4 @@
+// Базова URL-адреса API, яка використовується для формування адрес запитів
 const baseUrl= 'https://jsonplaceholder.typicode.com'
 // Отримує кінцевий endpoint та тип даних T які буде отримано в результаті виконання fetch-запиту
 export const getAll = async <T,>(endpoint:string)=> {

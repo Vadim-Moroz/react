@@ -1,5 +1,5 @@
 import {createSlice, isFulfilled, isRejected, type PayloadAction} from "@reduxjs/toolkit";
-import { loadUsers} from "./UserThunck.tsx";
+import { loadUsers} from "./UserThunk.tsx";
 import type {IUser} from "../../models/IUsers.tsx";
 
 type userSliceType = {

@@ -1,6 +1,6 @@
 import {createSlice, isFulfilled, isRejected, type PayloadAction} from "@reduxjs/toolkit";
 import type {IComment} from "../../models/IComments.tsx";
-import {loadComments} from "./CommentThunck.tsx";
+import {loadComments} from "./CommentThunk.tsx";
 
 
 type commentSliceType = {

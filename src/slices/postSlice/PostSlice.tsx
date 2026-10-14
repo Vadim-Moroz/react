@@ -1,5 +1,5 @@
 import {createSlice, isFulfilled, isRejected, type PayloadAction} from "@reduxjs/toolkit";
-import {loadPosts} from "./PostThunck.tsx";
+import {loadPosts} from "./PostThunk.tsx";
 import type {IPost} from "../../models/IPosts.tsx";
 
 type postSliceType = {
